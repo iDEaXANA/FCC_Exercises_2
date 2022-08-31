@@ -55,6 +55,31 @@ if (month === 6 && dayOfMonth === 18 && year === 1998) {
     console.log("Not even close")
 }
 /////////////////// Rock, Paper, Scissors ///////////////////
+let hands = ["rock", "paper", "scissor"]
+
+function getHand() {    // Work on more semantic names!!!
+    let i = Math.floor(Math.random() * 3)
+    console.log(hands[i])
+}
+getHand()
+
+/////////////////// Using combination of techniques to manipulate an array ///////////////////
+let fruit = ["orange", "apple", "orange", "orange", "apple"]
+let appleShelf = document.getElementById("apple-shelf")
+let orangeShelf = document.getElementById("orange-shelf")
+// There are two shelves which are just divs with background colours.
+function sortFruit() {
+    for (let i = 0; i < fruit.length; i++) {
+        if (fruit[i] === "orange") {
+            orangeShelf.textContent += "Orange" + " "
+        } else if (fruit[i] === "apple") {
+            appleShelf.textContent += "Apple" + " "
+        } else {
+            console.log("No such thing exists in this world")
+        }
+    }
+}
+sortFruit()
 
 
 
